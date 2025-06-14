@@ -47,7 +47,7 @@ SonXeber
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/SonXeber.git
+   git clone https://github.com/AliHasanov97/News.git
    cd SonXeber
    ```
 
