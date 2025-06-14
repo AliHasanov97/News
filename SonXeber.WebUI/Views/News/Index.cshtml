@@ -1,0 +1,23 @@
+﻿@model List<SonXeber.WebUI.ViewModels.NewsViewModel>
+
+<h2>Xəbərlər</h2>
+<a class="btn btn-primary" asp-action="Create">Yeni Xəbər</a>
+
+<table class="table mt-3">
+    <tr>
+        <th>Başlıq</th>
+        <th>Tarix</th>
+        <th>Əməliyyatlar</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td>@item.CreatedAt.ToShortDateString()</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Redaktə</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+            </td>
+        </tr>
+    }
+</table>
